@@ -25,6 +25,10 @@ cursor.execute('''UPDATE user SET age=99 WHERE rowid!=2 ''')
 
 
 
+#delete-удаление всех записей с четным rowid
+cursor.execute("""DELETE  FROM user where rowid%2 = 0 """)
+
+
 # REED-SELECT,fech
 cursor.execute('''SELECT rowid,* FROM user''')
 a=cursor.fetchall()
